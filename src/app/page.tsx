@@ -5,6 +5,7 @@ import { LocationSearch } from "@/components/LocationSearch";
 import { LoadingState } from "@/components/LoadingState";
 import { ErrorMessage } from "@/components/ErrorMessage";
 import { WeatherDisplay } from "@/components/WeatherDisplay";
+import { PageHeader } from "@/components/PageHeader";
 import { getWeatherData } from "@/lib/getWeather";
 import { WeatherData } from "@/types/weather";
 
@@ -40,14 +41,10 @@ export default function Home() {
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 dark:bg-zinc-950 px-4 py-12">
       <main className="w-full max-w-2xl space-y-8">
         {/* Header */}
-        <div className="text-center space-y-2">
-          <h1 className="text-4xl font-bold text-zinc-900 dark:text-white">
-            Weather App
-          </h1>
-          <p className="text-zinc-600 dark:text-zinc-400">
-            Simple weather forecast for your city
-          </p>
-        </div>
+        <PageHeader
+          title="Weather App"
+          subtitle="Simple weather forecast for your city"
+        />
 
         {/* Search at the top */}
         <div className="flex flex-col items-center">

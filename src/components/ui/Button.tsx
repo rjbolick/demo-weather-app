@@ -34,7 +34,8 @@ export function Button({
   // Variant-specific styles
   const variantStyles = {
     default: "bg-blue-600 text-white hover:bg-blue-700",
-    ghost: "text-blue-600 dark:text-blue-400 hover:underline",
+    ghost:
+      "text-blue-600 dark:text-blue-400 hover:bg-blue-100 dark:hover:bg-blue-900/20",
   };
 
   // Combine all styles
