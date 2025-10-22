@@ -17,11 +17,6 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  useEffect(() => {
-    // Load default city weather on mount
-    loadCityWeather(DEFAULT_CITY);
-  }, []);
-
   const loadCityWeather = (cityName: string) => {
     setLoading(true);
     setError("");
@@ -36,6 +31,11 @@ export default function Home() {
 
     setLoading(false);
   };
+
+  useEffect(() => {
+    // Load default city weather on mount
+    loadCityWeather(DEFAULT_CITY);
+  }, []);
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 dark:bg-zinc-950 px-4 py-12">
