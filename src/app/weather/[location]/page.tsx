@@ -89,7 +89,7 @@ export async function generateMetadata({ params }: PageProps) {
   const cityName = decodeURIComponent(location);
 
   return {
-    title: `${cityName} Weather - Weather App`,
+    title: `${cityName} weather`,
     description: `Detailed weather forecast for ${cityName}`,
   };
 }
